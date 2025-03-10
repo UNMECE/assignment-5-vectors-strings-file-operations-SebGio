@@ -42,6 +42,7 @@ void flip_vertically(std::vector<Pixel>& pixel_list)
 		{
 			out << pixel_list.at(i).x << "," << pixel_list.at(size - (i + 1)).y << "," << pixel_list.at(i).r << "," << pixel_list.at(i).g << "," << pixel_list.at(i).b << std::endl;
 		}
+		std::cout << "Data has been written to flipped.dat" << std::endl;
 	}
 	out.close();
 }

@@ -7,9 +7,14 @@ int main(int argc, char* argv[])
 {
 
 	std::vector<Pixel> pixel_list;
-
+	
+	if(argc < 2)
+	{
+		std::cout << "Program requires an argument to specify a file." << std::endl;
+		return 1;
+	}
 	//open file
-	std::string file = /*"pixels.dat";*/argv[1];
+	std::string file = argv[1];
 	std::ifstream in;
 	in.open(file, std::ios::in);
 	
@@ -50,5 +55,5 @@ int main(int argc, char* argv[])
 
 	average_colors(pixel_list);
 	flip_vertically(pixel_list);
-
+	return 0;
 }
